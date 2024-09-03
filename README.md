@@ -51,19 +51,19 @@ Log entries are automatically uploaded to Firebase. Ensure you have internet con
 
 ### Firebase Configuration
 
-To configure Firebase, follow these steps:
+To configure Firebase for your Windows application, follow these steps:
 
 1. **Create a Firebase Project**:  
    Go to the Firebase Console and create a new project.
 
 2. **Add Your App**:  
-   Add your app to the Firebase project. Follow the instructions to download the `google-services.json` (for Android) or `GoogleService-Info.plist` (for iOS).
+   Add your app to the Firebase project. Although `google-services.json` or `GoogleService-Info.plist` are not required for Windows, you still need to set up your Firebase project to integrate Firebase services.
 
-3. **Add Configuration Files**:  
-   Place the configuration files in the appropriate directories in your Flutter project.
+3. **Add Firebase Initialization Code**:  
+   Ensure your Flutter project includes the Firebase initialization code. Typically, this is done in the `main.dart` file with the `Firebase.initializeApp()` method.
 
 4. **Update Firebase Rules**:  
-   Make sure your Firebase Firestore rules are set up to allow reading and writing data for authenticated users.
+   Make sure your Firebase Firestore rules are set up to allow reading and writing data. You can set up your rules in the Firebase Console under the Firestore Database section.
 
 ### Automatic Startup
 
